@@ -11,6 +11,7 @@
 
 //OpenGL
 #include <glew.h>
+#include <glu.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
 
@@ -19,11 +20,11 @@
 #include "Protein.h"
 
 //Override draw_protein method
-void renderer::draw_protein(const protein &Protein, bool draw_bonds, bool draw_atoms, float thickness) {
+void renderer::draw_protein(const protein &Protein, bool draw_bonds, bool draw_atoms, float thickness, bool depth) {
     
     if (draw_bonds) {
         
-        glLineWidth(3.0f);
+        glLineWidth(1.0f);
         glBegin(GL_LINES);
 
         for (const bond& Bond : Protein.bonds){
@@ -41,20 +42,46 @@ void renderer::draw_protein(const protein &Protein, bool draw_bonds, bool draw_a
     
     }
 
-
     if (draw_atoms) {
-        
-        glEnable(GL_POINT_SMOOTH);
-        for (const atom& Atom : Protein.atoms) {
 
+        if (depth) {
+
+            GLUquadric* quad = gluNewQuadric();
+            gluQuadricNormals(quad, GLU_SMOOTH);
+
+            for (const atom& Atom : Protein.atoms) {
+
+                float radius = Protein.element_data.at(Atom.element).bond_threshold * (thickness / 10);
+                glm::vec3 colour = Protein.element_data.at(Atom.element).colour;
+                glColor3f(colour.r, colour.g, colour.b);
+
+                glPushMatrix();
+                glTranslatef(Atom.x, Atom.y, Atom.z);
+                gluSphere(quad, radius, 16, 16);
+                glPopMatrix();
+            }
+
+            gluDeleteQuadric(quad);
+        
+        }
+
+        else {
+
+            glEnable(GL_POINT_SMOOTH);
             glPointSize(thickness);
             glBegin(GL_POINTS);
-            glm::vec3 colour = Protein.element_data.at(Atom.element).colour;
-            glColor3f(colour.x, colour.y, colour.z);  
-            glVertex3f(Atom.x, Atom.y, Atom.z);
+
+            for (const atom& Atom : Protein.atoms) {
+
+                glm::vec3 colour = Protein.element_data.at(Atom.element).colour;
+                glColor3f(colour.x, colour.y, colour.z);
+                glVertex3f(Atom.x, Atom.y, Atom.z);
+                
+            }
             glEnd();
+            
         }
-    
+
     }
 
 }

@@ -14,7 +14,7 @@
 class renderer {
     public:
     
-        void draw_protein(const protein &Protein, bool draw_bonds, bool draw_atoms, float thickness);
+        void draw_protein(const protein &Protein, bool draw_bonds, bool draw_atoms, float thickness, bool depth);
         
 
 };
