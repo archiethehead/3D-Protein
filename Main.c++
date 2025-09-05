@@ -13,6 +13,7 @@
 
 //Graphics includes
 #include <glew.h>
+#include <glu.h>
 #include <glfw3.h>
 
 //Functions
@@ -29,9 +30,12 @@ string file_open(){
 int main() {
     bool draw_bonds = false;
     bool draw_atoms = true;
+    bool depth_perspective = false;
     float thickness = 1.0f;
+
     bool b_just_pressed = false;
     bool m_just_pressed = false;
+    bool p_just_pressed = false;
 
     protein new_protein;
     new_protein.load_PDB(file_open());
@@ -44,21 +48,12 @@ int main() {
     glewExperimental = GL_TRUE;
     glEnable(GL_DEPTH_TEST);
 
-    float fov = 45.0f;
-    float aspect = 800.0f / 600.0f;
-    float near = 0.1f;
-    float far = 1000.0f;
-    float top = tan(fov * 3.14159 / 360.0) * near;
-    float bottom = -top;
-    float right = top * aspect;
-    float left = -right;
-
     float y_angle = 0.0, x_angle = 0.0f;
     float camera_x = 0.0, camera_y = 0.0, camera_z = -150.0;
 
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glFrustum(left, right, bottom, top, near, far);
+    gluPerspective(45.0f, 800.0f / 600.0f, 0.1f, 1000.0f);
     renderer Renderer;
 
     while (!glfwWindowShouldClose(window)) {
@@ -66,12 +61,11 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
-
         glTranslatef(camera_x, camera_y, camera_z);
         glRotatef(-x_angle, 1.0f, 0.0f, 0.0f);
         glRotatef(-y_angle, 0.0f, 1.0f, 0.0f);
 
-        Renderer.draw_protein(new_protein, draw_bonds, draw_atoms, thickness);
+        Renderer.draw_protein(new_protein, draw_bonds, draw_atoms, thickness, depth_perspective);
         glfwSwapBuffers(window);
         glfwPollEvents();
 
@@ -94,15 +88,27 @@ int main() {
         //Graphics controls
         bool b_pressed = glfwGetKey(window, GLFW_KEY_B) == GLFW_PRESS;
         if (b_pressed && !b_just_pressed) {
+
             draw_bonds = !draw_bonds;
+
         }
         b_just_pressed = b_pressed;
 
         bool m_pressed = glfwGetKey(window, GLFW_KEY_M) == GLFW_PRESS;
         if (m_pressed && !m_just_pressed) {
+
             draw_atoms = !draw_atoms;
+
         }
         m_just_pressed = m_pressed;
+
+        bool p_pressed = glfwGetKey(window, GLFW_KEY_P) == GLFW_PRESS;
+        if (p_pressed && !p_just_pressed) {
+
+            depth_perspective = !depth_perspective;
+
+        }
+        p_just_pressed = p_pressed;
 
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) glfwSetWindowShouldClose(window, GLFW_TRUE);
 
