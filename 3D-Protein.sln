@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3D-Protein", "3D-Protein.vcxproj", "{FCE1ED23-6360-4796-9E7A-FC99406ED364}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCE1ED23-6360-4796-9E7A-FC99406ED364}.Debug|x64.ActiveCfg = Debug|x64
+		{FCE1ED23-6360-4796-9E7A-FC99406ED364}.Debug|x64.Build.0 = Debug|x64
+		{FCE1ED23-6360-4796-9E7A-FC99406ED364}.Debug|x86.ActiveCfg = Debug|Win32
+		{FCE1ED23-6360-4796-9E7A-FC99406ED364}.Debug|x86.Build.0 = Debug|Win32
+		{FCE1ED23-6360-4796-9E7A-FC99406ED364}.Release|x64.ActiveCfg = Release|x64
+		{FCE1ED23-6360-4796-9E7A-FC99406ED364}.Release|x64.Build.0 = Release|x64
+		{FCE1ED23-6360-4796-9E7A-FC99406ED364}.Release|x86.ActiveCfg = Release|Win32
+		{FCE1ED23-6360-4796-9E7A-FC99406ED364}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6407AE47-B0B6-40D3-A3F2-B8704C2191DE}
+	EndGlobalSection
+EndGlobal

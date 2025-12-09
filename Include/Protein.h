@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 #include <map>
-#include <glm.hpp>
+#include <GLM/glm/glm.hpp>
 using namespace std;
 
 //Structs

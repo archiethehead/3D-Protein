@@ -1,0 +1,14 @@
+﻿D:\Program Files\Visual Studio 2022\VS22\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(524,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+Main.obj : error LNK2001: unresolved external symbol _glfwInit
+Main.obj : error LNK2001: unresolved external symbol _glfwTerminate
+Main.obj : error LNK2001: unresolved external symbol _glfwWindowHint
+Main.obj : error LNK2001: unresolved external symbol _glfwCreateWindow
+Main.obj : error LNK2001: unresolved external symbol _glfwDestroyWindow
+Main.obj : error LNK2001: unresolved external symbol _glfwWindowShouldClose
+Main.obj : error LNK2001: unresolved external symbol _glfwSetWindowShouldClose
+Main.obj : error LNK2001: unresolved external symbol _glfwPollEvents
+Main.obj : error LNK2001: unresolved external symbol _glfwGetKey
+Main.obj : error LNK2001: unresolved external symbol _glfwMakeContextCurrent
+Main.obj : error LNK2001: unresolved external symbol _glfwSwapBuffers
+D:\Personal\Programs\C++\3D-Protein\new_3D-Protein\3D-Protein\Build\Compiled\3D-Protein.exe : fatal error LNK1120: 11 unresolved externals
