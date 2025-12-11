@@ -1,16 +1,17 @@
 # 3D-Protein
 An OpenGL/C++ model viewer. A graphics engine that takes a .pdb file (protein data bank) as input, procedurally interpreting atoms (and bonds through bond threshold mathematics), and then rendering them as points and lines with atom specific colours.
 
-# Installation
-The latest build can be found in Build/Compiled, but all of the necessary libraries for compilation can be found here, and compiled using Visual Studio and the .sln provided.
+## Installation
+The latest build can be found in Build/Compiled, but all of the necessary libraries for compilation can be found here, and compiled using Visual Studio and the .sln provided. The repository can be cloned with the git command:
+> git clone https://github.com/archiethehead/3D-Protein
 
-# Quick Start
+## Quick Start
 Start the program (opening the CLI), type the name of the file you wish to view (DNA is the provided example), follow it with .pdb, and use W/A for zoom, A/D for horizontal movement, LSHIFT/SPACE for vertical movement, and the arrow keys for rotational movement. P toggles depth rendering, B toggle bonds, M toggles molecules, and up (^) / down (v) on the numpad toggle thickness. Tab opens the file prompt again, so that different models may be viewed.
 
-# Contributors
+## Contributors
 Mr. Archie T. Healy - archiehealy06@gmail.com
 
-# License
+## License
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
