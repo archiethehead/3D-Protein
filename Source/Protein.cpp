@@ -10,6 +10,7 @@
 #include <algorithm> 
 #include <cctype>
 #include <string>
+
 using namespace std;
 
 //Functions

@@ -3,7 +3,6 @@
 //////////////
 
 //Standard includes
-using namespace std;
 #include <iostream>
 #include <vector>
 #include <cmath>
@@ -17,8 +16,10 @@ using namespace std;
 #include <Gl/GLU.h>
 #include <GLFW/include/GLFW/glfw3.h>
 
+using namespace std;
+
 //Functions
-string file_open(){
+string file_open() {
 
     string file_name;
     cout << "Enter .pdb file name here: ";
@@ -73,12 +74,12 @@ int main() {
 
 
         //Movement controls
-        if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) camera_z += 0.1;
-        if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) camera_z -= 0.1;
-        if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) camera_x += 0.1;
-        if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) camera_x -= 0.1;
-        if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) camera_y -= 0.1;
-        if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) camera_y += 0.1;
+        if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) camera_z += 0.1f;
+        if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) camera_z -= 0.1f;
+        if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) camera_x += 0.1f;
+        if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) camera_x -= 0.1f;
+        if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) camera_y -= 0.1f;
+        if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) camera_y += 0.1f;
 
 
         //Rotational controls
@@ -114,8 +115,8 @@ int main() {
 
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) glfwSetWindowShouldClose(window, GLFW_TRUE);
 
-        if (glfwGetKey(window, GLFW_KEY_KP_8) == GLFW_PRESS) thickness = 5.0;
-        if (glfwGetKey(window, GLFW_KEY_KP_2) == GLFW_PRESS) thickness = 1.0;
+        if (glfwGetKey(window, GLFW_KEY_Z) == GLFW_PRESS) thickness = 5.0;
+        if (glfwGetKey(window, GLFW_KEY_X) == GLFW_PRESS) thickness = 1.0;
 
         //File controls
         if (glfwGetKey(window, GLFW_KEY_TAB) == GLFW_PRESS){

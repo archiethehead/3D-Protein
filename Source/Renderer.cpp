@@ -26,7 +26,7 @@ void renderer::draw_protein(const protein &Protein, bool draw_bonds, bool draw_a
 
     if (draw_bonds) {
         
-        glLineWidth(1.0f);
+        glLineWidth(2.0f);
         glBegin(GL_LINES);
 
         for (const bond& Bond : Protein.bonds){

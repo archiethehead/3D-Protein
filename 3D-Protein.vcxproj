@@ -80,11 +80,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>D:\Personal\Programs\C++\3D-Protein\new_3D-Protein\3D-Protein\Build\Compiled</OutDir>
+    <OutDir>$(SolutionDir)Build\Compiled</OutDir>
     <IntDir>.\Build\Intermediary</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>D:\Personal\Programs\C++\3D-Protein\new_3D-Protein\3D-Protein\Build\Compiled</OutDir>
+    <OutDir>$(SolutionDir)Build\Compiled</OutDir>
     <IntDir>.\Build\Intermediary</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -141,7 +141,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Personal\Programs\C++\3D-Protein\new_3D-Protein\3D-Protein\External;D:\Personal\Programs\C++\3D-Protein\new_3D-Protein\3D-Protein;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)External;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -158,7 +158,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Personal\Programs\C++\3D-Protein\new_3D-Protein\3D-Protein\External;D:\Personal\Programs\C++\3D-Protein\new_3D-Protein\3D-Protein;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)External;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
