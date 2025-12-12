@@ -7,14 +7,23 @@ The latest build can be found in Build/Compiled, but all of the necessary librar
 
 ## Quick Start
 Start the program (opening the CLI), type the name of the file you wish to view (DNA is the provided example), follow it with .pdb.
+
 W/A/S/D - Movement Controls
+
 LShift/Spacebar - Zoom Controls
+
 ^/v/</> - Rotational Controls
+
 P - Depth Toggle
+
 B - Bond Toggle
+
 M - Molecule Toggle
+
 Z - Thick Atoms
+
 X - Thin Atoms
+
 Tab - Open File Prompt
 
 ## Contributors
