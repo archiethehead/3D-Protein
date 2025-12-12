@@ -2,17 +2,17 @@
 An OpenGL/C++ model viewer. A graphics engine that takes a .pdb file (protein data bank) as input, procedurally interpreting atoms (and bonds through bond threshold mathematics), and then rendering them as points and lines with atom specific colours.
 
 ## Installation
-The latest build can be found in Build/Compiled, but all of the necessary libraries for compilation can be found here, and compiled using Visual Studio and the .sln provided. The repository can be cloned with the git command:
+The latest build can be found in Build, but all of the necessary libraries for compilation can be found here, and compiled using Visual Studio and the .sln provided. The repository can be cloned with the git command:
 > git clone https://github.com/archiethehead/3D-Protein
 
 ## Quick Start
-Start the program (opening the CLI), type the name of the file you wish to view (DNA is the provided example), follow it with .pdb.
+Start the program (opening the CLI), type the name of the file (case sensitive) you wish to view (DNA is onf of the provided example), follow it with .pdb.
 
 W/A/S/D - Movement Controls
 
 LShift/LControl - Zoom Controls
 
-^/v/</> - Rotational Controls
+^/</v/> - Rotational Controls
 
 P - Depth Toggle
 
