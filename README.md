@@ -10,7 +10,7 @@ Start the program (opening the CLI), type the name of the file you wish to view 
 
 W/A/S/D - Movement Controls
 
-LShift/Spacebar - Zoom Controls
+LShift/LControl - Zoom Controls
 
 ^/v/</> - Rotational Controls
 

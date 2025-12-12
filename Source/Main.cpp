@@ -68,7 +68,7 @@ int main() {
 
         //Zoom Controls
         if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) camera_z += 0.1f;
-        if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) camera_z -= 0.1f;
+        if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS) camera_z -= 0.1f;
 
         //Movement Controls
         if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) camera_x += 0.1f;
