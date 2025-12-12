@@ -2,7 +2,6 @@
 //Protein.h//
 /////////////
 
-//Includes
 #pragma once
 #include <string>
 #include <vector>
@@ -10,7 +9,6 @@
 #include <GLM/glm/glm.hpp>
 using namespace std;
 
-//Structs
 struct atom {
 
     float x;
@@ -33,9 +31,6 @@ struct element_info {
     glm::vec3 colour;
 
 };
-
-
-//Classes
 
 class protein {
 

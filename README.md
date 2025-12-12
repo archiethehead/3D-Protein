@@ -6,7 +6,16 @@ The latest build can be found in Build/Compiled, but all of the necessary librar
 > git clone https://github.com/archiethehead/3D-Protein
 
 ## Quick Start
-Start the program (opening the CLI), type the name of the file you wish to view (DNA is the provided example), follow it with .pdb, and use W/A for zoom, A/D for horizontal movement, LSHIFT/SPACE for vertical movement, and the arrow keys for rotational movement. P toggles depth rendering, B toggle bonds, M toggles molecules, and up (^) / down (v) on the numpad toggle thickness. Tab opens the file prompt again, so that different models may be viewed.
+Start the program (opening the CLI), type the name of the file you wish to view (DNA is the provided example), follow it with .pdb.
+W/A/S/D - Movement Controls
+LShift/Spacebar - Zoom Controls
+^/v/</> - Rotational Controls
+P - Depth Toggle
+B - Bond Toggle
+M - Molecule Toggle
+Z - Thick Atoms
+X - Thin Atoms
+Tab - Open File Prompt
 
 ## Contributors
 Mr. Archie T. Healy - archiehealy06@gmail.com

@@ -2,8 +2,6 @@
 //Renderer.h//
 //////////////
 
-
-//Includes
 #pragma once
 #include "Protein.h"
 #include <GLM/glm/glm.hpp>
@@ -11,9 +9,6 @@
 #include <GL/glu.h>
 #include <GL/gl.h>
 
-
-
-//Classes
 class renderer {
 public:
     renderer();

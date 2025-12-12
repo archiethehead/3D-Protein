@@ -80,8 +80,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)Build\Compiled</OutDir>
-    <IntDir>.\Build\Intermediary</IntDir>
+    <OutDir>$(SolutionDir)Build</OutDir>
+    <IntDir>$(SOlutionDIr)Intermediate</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Build\Compiled</OutDir>

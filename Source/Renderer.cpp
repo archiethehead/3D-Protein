@@ -2,18 +2,12 @@
 //Renderer.c++//
 ////////////////
 
-//Includes
-
-//Standard library
 #include <vector>
 #include <string>
 #include <iostream>
-
-//Renderer
 #include "Include/Renderer.h"
 #include "Include/Protein.h"
 
-//Override draw_protein method
 renderer::renderer() {
     quad = gluNewQuadric();
     gluQuadricNormals(quad, GLU_SMOOTH);

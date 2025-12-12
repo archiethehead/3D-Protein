@@ -2,23 +2,17 @@
 //3D-Protein//
 //////////////
 
-//Standard includes
 #include <iostream>
 #include <vector>
 #include <cmath>
-
-//3D-Protein includes
 #include <Include/Protein.h>
 #include <Include/Renderer.h>
-
-//Graphics includes
 #include <GLEW/glew-2.1.0//include//GL/glew.h>
 #include <Gl/GLU.h>
 #include <GLFW/include/GLFW/glfw3.h>
 
 using namespace std;
 
-//Functions
 string file_open() {
 
     string file_name;
@@ -72,17 +66,18 @@ int main() {
         glfwSwapBuffers(window);
         glfwPollEvents();
 
+        //Zoom Controls
+        if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) camera_z += 0.1f;
+        if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) camera_z -= 0.1f;
 
-        //Movement controls
-        if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) camera_z += 0.1f;
-        if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) camera_z -= 0.1f;
+        //Movement Controls
         if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) camera_x += 0.1f;
         if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) camera_x -= 0.1f;
-        if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) camera_y -= 0.1f;
-        if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) camera_y += 0.1f;
+        if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) camera_y -= 0.1f;
+        if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) camera_y += 0.1f;
 
 
-        //Rotational controls
+        //Rotational Controls
         if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) y_angle += 0.1f;
         if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS) y_angle -= 0.1f;
         if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) x_angle -= 0.1f;
@@ -127,6 +122,9 @@ int main() {
             new_protein.bonds.clear();
             draw_bonds = false;
             draw_atoms = true;
+            depth_perspective = false;
+            thickness = 1.0f;
+
 
             string file_name = file_open();
             new_protein.load_PDB(file_name);

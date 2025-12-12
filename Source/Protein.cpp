@@ -2,7 +2,6 @@
 //Protein.c++//
 ///////////////
 
-//Includes
 #include <Include/Protein.h>
 #include <fstream>
 #include <sstream>
@@ -10,10 +9,8 @@
 #include <algorithm> 
 #include <cctype>
 #include <string>
-
 using namespace std;
 
-//Functions
 float atom_distance(const atom& atom_a, const atom& atom_b) {
 
     glm::vec3 position_a(atom_a.x, atom_a.y, atom_a.z);
@@ -23,7 +20,6 @@ float atom_distance(const atom& atom_a, const atom& atom_b) {
 
 };
 
-//Override load_PDB method
 bool protein::load_PDB(const string &filename) {
     
     ifstream file(filename);

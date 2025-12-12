@@ -1,1 +1,8 @@
+# Directories
 .vs/
+Debug/
+3D-Protein/
+Intermediate/
+
+# Files
+Build/Compiled/3D-Protein.pdb
