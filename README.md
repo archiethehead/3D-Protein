@@ -6,7 +6,7 @@ The latest build can be found in Build, but all of the necessary libraries for c
 > git clone https://github.com/archiethehead/3D-Protein
 
 ## Quick Start
-Start the program (opening the CLI), type the name of the file (case sensitive) you wish to view (DNA is onf of the provided example), follow it with .pdb.
+Start the program (opening the CLI), type the name of the file (case sensitive) you wish to view (DNA is one of the provided example), follow it with .pdb.
 
 W/A/S/D - Movement Controls
 
